@@ -1,4 +1,4 @@
-name: SampleWindowsRange
+name: sample-windows-range
 networks:
   - name: windowsnet
     cidr: 10.0.0.0/24
