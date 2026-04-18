@@ -1,11 +1,5 @@
 name: sample-windows-range
-hosts: []
-routers: []
-networks:
-  - name: windowsnet
-    cidr: 10.0.0.0/24
-
-vms:
+hosts:
   - name: windows1
     image: windows-10-x86_64
     networks:
@@ -26,3 +20,7 @@ vms:
     networks:
       - name: windowsnet
         ip: 10.0.0.13
+routers: []
+networks:
+  - name: windowsnet
+    cidr: 10.0.0.0/24
