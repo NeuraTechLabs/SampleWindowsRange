@@ -1,25 +1,25 @@
 networks:
-  - name: windows_net
+  - name: windowsnet
     cidr: 10.0.0.0/24
 
 vms:
   - name: windows1
     image: windows-10-x86_64
     networks:
-      - name: windows_net
+      - name: windowsnet
         ip: 10.0.0.10
   - name: windows2
     image: windows-10-x86_64
     networks:
-      - name: windows_net
+      - name: windowsnet
         ip: 10.0.0.11
   - name: windows3
     image: windows-10-x86_64
     networks:
-      - name: windows_net
+      - name: windowsnet
         ip: 10.0.0.12
   - name: windows4
     image: windows-10-x86_64
     networks:
-      - name: windows_net
+      - name: windowsnet
         ip: 10.0.0.13
