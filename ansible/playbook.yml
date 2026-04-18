@@ -5,4 +5,4 @@
   roles:
     - kypo-topology
   vars_files:
-    - topology.yml
+    - ../topology.yml
