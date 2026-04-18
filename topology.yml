@@ -1,23 +1,36 @@
 name: sample-windows-range
 hosts:
   - name: windows1
-    base_box: windows-10-x86_64
+    base_box:
+      image: windows-10-x86_64
   - name: windows2
-    base_box: windows-10-x86_64
+    base_box:
+      image: windows-10-x86_64
   - name: windows3
-    base_box: windows-10-x86_64
+    base_box:
+      image: windows-10-x86_64
   - name: windows4
-    base_box: windows-10-x86_64
-routers: {}
+    base_box:
+      image: windows-10-x86_64
+routers: []
+wan:
+  name: internet-connection
+  cidr: 100.100.100.0/24
 networks:
-  windowsnet:
+  - name: windowsnet
     cidr: 10.0.0.0/24
 net_mappings:
-  windows1:
-    windowsnet: 10.0.0.10
-  windows2:
-    windowsnet: 10.0.0.11
-  windows3:
-    windowsnet: 10.0.0.12
-  windows4:
-    windowsnet: 10.0.0.13
+  - host: windows1
+    network: windowsnet
+    ip: 10.0.0.10
+  - host: windows2
+    network: windowsnet
+    ip: 10.0.0.11
+  - host: windows3
+    network: windowsnet
+    ip: 10.0.0.12
+  - host: windows4
+    network: windowsnet
+    ip: 10.0.0.13
+router_mappings: []
+groups: []
