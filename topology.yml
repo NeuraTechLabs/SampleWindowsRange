@@ -18,6 +18,5 @@ hosts:
       windowsnet: 10.0.0.13
 routers: []
 networks:
-  - name: windowsnet
+  windowsnet:
     cidr: 10.0.0.0/24
-    interface: eth0
