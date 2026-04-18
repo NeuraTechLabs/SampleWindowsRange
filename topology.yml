@@ -3,23 +3,19 @@ hosts:
   - name: windows1
     base_box: windows-10-x86_64
     networks:
-      - name: windowsnet
-        ip: 10.0.0.10
+      windowsnet: 10.0.0.10
   - name: windows2
     base_box: windows-10-x86_64
     networks:
-      - name: windowsnet
-        ip: 10.0.0.11
+      windowsnet: 10.0.0.11
   - name: windows3
     base_box: windows-10-x86_64
     networks:
-      - name: windowsnet
-        ip: 10.0.0.12
+      windowsnet: 10.0.0.12
   - name: windows4
     base_box: windows-10-x86_64
     networks:
-      - name: windowsnet
-        ip: 10.0.0.13
+      windowsnet: 10.0.0.13
 routers: []
 networks:
   - name: windowsnet
