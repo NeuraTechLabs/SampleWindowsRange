@@ -1,0 +1,8 @@
+---
+- name: Create KyPO topology
+  hosts: localhost
+  connection: local
+  roles:
+    - kypo-topology
+  vars_files:
+    - topology.yml
