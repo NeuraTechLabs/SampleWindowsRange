@@ -16,7 +16,13 @@ hosts:
     base_box:
       image: windows-10-x86_64
     flavor: m1.large
-routers: []
+routers:
+  - name: router
+    base_box:
+      image: debian-12-x86_64
+    mgmt_user: debian
+    mgmt_protocol: ssh
+    flavor: standard.small
 wan:
   name: internet-connection
   cidr: 100.100.100.0/24
@@ -36,5 +42,8 @@ net_mappings:
   - host: windows4
     network: windowsnet
     ip: 10.0.0.13
-router_mappings: []
+router_mappings:
+  - router: router
+    network: windowsnet
+    ip: 10.0.0.1
 groups: []
