@@ -3,15 +3,19 @@ hosts:
   - name: windows1
     base_box:
       image: windows-10-x86_64
+    flavor: m1.large
   - name: windows2
     base_box:
       image: windows-10-x86_64
+    flavor: m1.large
   - name: windows3
     base_box:
       image: windows-10-x86_64
+    flavor: m1.large
   - name: windows4
     base_box:
       image: windows-10-x86_64
+    flavor: m1.large
 routers: []
 wan:
   name: internet-connection
